@@ -98,7 +98,7 @@ router.get('/mypost', checkAuth, (req, res) => {
 })
 
 
-//create post
+//create post create tweet
 router.post('/createpost', checkAuth, (req,res) => {
     const {body} = req.body;
     if(body) {

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
+// const cors = require('cors');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 5000;
 require('dotenv').config();
@@ -16,14 +16,16 @@ db.on('connected', () => {
 db.on('error', (err) => {
     console.log('mongo connection err : ',err);
 });
-app.use(cors());
+
+// app.use(cors());
 app.use(express.json());
 const userAuthRoute = require('./routes/userauth')
-// const postRoute = require('./routes/post')
-// const userRoute = require('./routes/user')
-// app.use('/auth', userAuthRoute);
-// app.use('/post', postRoute);
-// app.use('/user', userRoute);
+const postRoute = require('./routes/post')
+const userRoute = require('./routes/user')
+
+app.use('/auth', userAuthRoute);
+app.use('/post', postRoute);
+app.use('/user', userRoute);
 
 
 app.listen(PORT, ()=> {

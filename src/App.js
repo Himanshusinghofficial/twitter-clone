@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, createContext, useReducer, useContext} from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, useHistory } from 'react-router-dom';
+import NavBar from './components/Navbar';
+import Profile from './components/screens/Profile';
+import SignIn from './components/screens/Login';
+import SignUp from './components/screens/Signup';
+import Home from './components/screens/Home';
+import Explore from './components/screens/Explore'
+// import CreatePost from './components/screens/CreatePost';
+// import {reducer, initialState} from './reducers/userReducer'
 
 function App() {
+  // const [state, dispatch] = useReducer(reducer, initialState)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <Route path="/" exact component={Home} />
+      <Route path="/profile" exact component={Profile} />
+      <Route path="/explore" exact component={Explore} />
+      <Route path="/login" exact component={SignIn} />
+      <Route path="/signup" exact component={SignUp} />
+      {/* <Route path="/createpost" exact component={CreatePost} /> */}
+    </Router>
   );
 }
 
