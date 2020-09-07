@@ -3,7 +3,6 @@ const bcrypt = require('bcryptjs')
 const User = require('../models/user.model');
 const jwt = require('jsonwebtoken');
 
-
 // signup route
 router.post('/signup', (req,res) => {
     User.find({ email: req.body.email })

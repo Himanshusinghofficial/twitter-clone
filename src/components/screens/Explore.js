@@ -117,52 +117,127 @@ export default function Explore() {
 
   return (
     <>
-    {
-      data.map(item => {
-        return (
-          <Card style={{maxWidth:"1000px", margin:"35px auto"}} className={classes.root}>
-            <CardHeader
-              avatar={
-                <Avatar aria-label="recipe" className={classes.avatar}>
-                  {item.postedBy.name[0]}
-                </Avatar>
-              }
-              title={item.postedBy.name}
-              subheader="September 14, 2016"
-            />
-            <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {item.body}
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                {item.likes.length} <FavoriteIcon />
-              </IconButton>
-              <IconButton
-                className={clsx(classes.expand, {
-                  [classes.expandOpen]: expanded,
-                })}
-                onClick={handleExpandClick}
-                aria-expanded={expanded}
-                aria-label="show more"
-              >
-                <ExpandMoreIcon />
-              </IconButton>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-              <CardContent>
-                <Typography paragraph>Method:</Typography>
-                <Typography paragraph>
-                  Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-                  minutes.
-                </Typography>
-              </CardContent>
-            </Collapse>
-          </Card>
-        )
-      })
-    }
-    </>
-  );
+    <Card style={{maxWidth:"1000px", margin:"35px auto", border: "1px solid black"}} className={classes.root}>
+      <CardHeader
+        avatar={
+          <Avatar aria-label="recipe" className={classes.avatar}>
+            R
+          </Avatar>
+        }
+        title="Rahul"
+        subheader="September 5, 2020"
+      />
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          10 <FavoriteIcon />
+        </IconButton>
+        <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </IconButton>
+      </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>
+            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
+            minutes.
+          </Typography>
+        </CardContent>
+      </Collapse>
+    </Card>
+
+    <Card style={{maxWidth:"1000px", margin:"35px auto", border: "1px solid black"}} className={classes.root}>
+      <CardHeader
+        avatar={
+          <Avatar aria-label="recipe" className={classes.avatar}>
+            V
+          </Avatar>
+        }
+        title="vikash"
+        subheader="September 14, 2016"
+      />
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.          </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          12 <FavoriteIcon />
+        </IconButton>
+        <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </IconButton>
+      </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>
+            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
+            minutes.
+          </Typography>
+        </CardContent>
+      </Collapse>
+    </Card>
+    <Card style={{maxWidth:"1000px", margin:"35px auto", border: "1px solid black"}} className={classes.root}>
+      <CardHeader
+        avatar={
+          <Avatar aria-label="recipe" className={classes.avatar}>
+            V
+          </Avatar>
+        }
+        title="vishal"
+        subheader="August 14, 2020"
+      />
+
+      <CardContent>
+      <Typography variant="body2" color="textSecondary" component="p">
+         But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+      </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          15 <FavoriteIcon />
+        </IconButton>
+        <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </IconButton>
+      </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>
+            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
+            minutes.
+          </Typography>
+        </CardContent>
+      </Collapse>
+    </Card>
+  </>
+  )
 }

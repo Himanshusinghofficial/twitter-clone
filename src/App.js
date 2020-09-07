@@ -25,10 +25,10 @@ const Routing = () => {
   return (
     <>
       <Route path="/" exact component={Home} />
-      <Route path="/profile" exact component={Profile} />
-      <Route path="/explore" exact component={Explore} />
       <Route path="/login" exact component={Login} />
       <Route path="/signup" exact component={SignUp} />
+      <Route path="/profile" exact component={Profile} />
+      <Route path="/explore" exact component={Explore} />
       {/* <Route path="/createpost" exact component={CreatePost} /> */}
     </>
   )

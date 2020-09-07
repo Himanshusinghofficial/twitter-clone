@@ -63,7 +63,7 @@ const Profile = () => {
                     <p class="text-base text-gray-600">JohnDoe</p>
                     <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
                     <div class="inline-flex inline-flex-col items-left text-left">
-                    <p class="text-base text-gray-600">100 Followers</p><p class="text-base text-gray-600 ml-16">100 Followings</p>
+                    <p class="text-base text-gray-600">25 Followers</p><p class="text-base text-gray-600 ml-16">100 Followings</p>
                     </div>
                 </div>
                 </div>
