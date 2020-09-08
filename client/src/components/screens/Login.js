@@ -11,8 +11,9 @@ const Login = () => {
 
     const postData = () => {
         //regex for email validation
+        // console.log("xxxxx")
 
-        fetch("http://localhost:5000/auth/signin", {
+        fetch("/auth/signin", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
@@ -21,7 +22,7 @@ const Login = () => {
         })
         .then(res => res.json())
         .then(data => {
-            // console.log(data)
+            console.log(data)
             if(data.error) {
                console.log(data.error)
             } else {
@@ -42,7 +43,7 @@ const Login = () => {
                 <input type="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 <button onClick={() => postData()}> Login </button>
-                </form>
+            </form>
             <Link to="/signup">Don't have Account?</Link>
         </div>
     )

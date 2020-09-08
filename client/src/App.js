@@ -1,6 +1,6 @@
 import React, {useEffect, createContext, useReducer, useContext} from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Route, useHistory, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Profile from './components/screens/Profile';
 import Login from './components/screens/Login';
@@ -23,14 +23,14 @@ const Routing = () => {
   },[])
 
   return (
-    <>
+    <Switch>
       <Route path="/" exact component={Home} />
+      <Route path="/profile" exact component={Profile} />
       <Route path="/login" exact component={Login} />
       <Route path="/signup" exact component={SignUp} />
-      <Route path="/profile" exact component={Profile} />
       <Route path="/explore" exact component={Explore} />
       {/* <Route path="/createpost" exact component={CreatePost} /> */}
-    </>
+    </Switch>
   )
 }
 function App() {

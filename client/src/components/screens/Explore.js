@@ -38,7 +38,7 @@ export default function Explore() {
   const [data, setData] = useState([])
     const {state, dispatch} = useContext(userContext)
     useEffect(() => {
-        fetch('http://localhost:5000/post/allpost', {
+        fetch('/post/allpost', {
             headers: {
                 "Authorization": "Bearer "+localStorage.getItem("jwt")
             }
@@ -52,7 +52,7 @@ export default function Explore() {
 
 
     const likePost = (id) => {
-      fetch('http://localhost:5000/post/likes', {
+      fetch('/post/likes', {
           method:"put",
           headers: {
               "Content-Type": "application/json",
@@ -80,7 +80,7 @@ export default function Explore() {
   }
 
   const putComment = (text, postId) => {
-      fetch('http://localhost:5000/post/comment', {
+      fetch('/post/comment', {
           method:"put",
           headers: {
               "Content-Type": "application/json",

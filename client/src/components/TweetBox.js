@@ -11,7 +11,7 @@ function TweetBox() {
   const [tweet, setTweet] = useState("")
   useEffect(() => {
     if(body) {
-        fetch("http://localhost:5000/post/createpost", {
+        fetch("/post/createpost", {
             method: "post",
             headers: {
                 "Content-Type": "application/json",

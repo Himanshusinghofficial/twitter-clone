@@ -11,7 +11,7 @@ const Signup = () => {
     const postData = () => {
         //regex for email validation
 
-        fetch('http://localhost:5000/auth/signup', {
+        fetch('/auth/signup', {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
